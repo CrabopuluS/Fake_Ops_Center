@@ -1,0 +1,2 @@
+[console_scripts]
+fake-ops-center = fake_ops_center.app:main

@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=63", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fake-ops-center"
+version = "0.1.0"
+description = "Fake Ops Center – synthetic operations command center demo"
+readme = "README.md"
+authors = [{name = "Fake Ops Team", email = "fake.ops@example.com"}]
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = [
+    "PySide6>=6.6",
+    "qasync>=0.24.0",
+    "pyqtgraph>=0.13",
+    "pydantic>=1.10",
+    "PyYAML>=6",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-asyncio>=0.21",
+    "ruff>=0.1",
+    "black>=23",
+    "pyinstaller>=6",
+]
+
+[project.scripts]
+fake-ops-center = "fake_ops_center.app:main"
+
+[tool.black]
+line-length = 88
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E203"]
+

@@ -1,0 +1,17 @@
+theme: themes/dark.yaml
+window:
+  fullscreen: false
+  size: [1600, 900]
+feeds:
+  metrics_hz: 10
+  logs_per_sec: 6
+  incidents_per_min: 8
+  incident_autoresolve_sec: [30, 120]
+buffers:
+  metrics_seconds: 120
+  max_logs: 1000
+  max_incidents: 200
+map:
+  grid: [20, 12]
+  hotspot_prob: 0.15
+  max_markers: 40
